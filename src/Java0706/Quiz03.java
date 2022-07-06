@@ -1,4 +1,4 @@
-package Java0706;
+
 
 class Sum1 {
     public static void main (String[] args){
@@ -21,4 +21,3 @@ class Sum1 {
         System.out.println(b-=4);
     }
 } 
-

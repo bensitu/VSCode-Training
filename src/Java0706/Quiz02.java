@@ -1,6 +1,6 @@
-package Java0706;
 
-public class Quiz003 {
+
+public class Quiz02 {
     public static void main (String[] args){
         int a = 6+7;
         int b = 15-4;
