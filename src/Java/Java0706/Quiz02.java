@@ -1,5 +1,4 @@
-
-
+package Java.Java0706;
 public class Quiz02 {
     public static void main (String[] args){
         int a = 6+7;

@@ -1,4 +1,4 @@
-package Java0705;
+package Java.Java0705;
 
 class Sum {
     public static void main (String[] args){

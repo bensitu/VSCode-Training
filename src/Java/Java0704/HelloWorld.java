@@ -1,4 +1,4 @@
-package Java0704;
+package Java.Java0704;
 
 class HelloWorld {
 	public static void main(String[] args) {      
