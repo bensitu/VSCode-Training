@@ -17,7 +17,24 @@ module.exports = {
   },
 
   // 模块，装载器等，见下文
-  module: {},
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        use: [
+            'style-loader',
+            {
+                loader: 'css-loader',
+                options: { importLoaders: 1 }
+            },
+            {
+                loader: 'less-loader',
+                options: { noIeCompat: true }
+            }
+        ]
+      }
+    ]
+  },
 
   // 插件，`.css` 的剥离和压缩、`.html` 的动态生成等，见下文
   plugins: []
