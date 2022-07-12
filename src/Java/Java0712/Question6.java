@@ -18,20 +18,25 @@ public class Question6 {
         System.out.println("Please input the numer which you want to delete:");
         Scanner input = new Scanner(System.in);
         int num = input.nextInt();
-        int count = arr1.length;
-        int[] arr2 = new int[count];
+        int count = 0;
+        int[] arr2 = new int[arr1.length];
         for (int k = 0; k < arr1.length; k++) {
             if (arr1[k] != num) {
                 count++;
                 arr2[k] = arr1[k];
             } else {
-                
+
             }
+        }
+        int[] arr3 = new int[count];
+
+        for (int l = 0; l < arr3.length; l++) {
+            arr3[l] = arr2[l];
         }
 
         System.out.println("Here's the latest array list:");
-        for (int j = 0; j < arr2.length; j++) {
-            System.out.print(arr2[j] + " ");
+        for (int j = 0; j < arr3.length; j++) {
+            System.out.print(arr3[j] + " ");
         }
         System.out.println();
         input.close();

@@ -10,7 +10,7 @@ public class Question7 {
         int numSub = input.nextInt();
 
         int[] score = new int[numSub];
-        int sum = 0;
+        double sum = 0;
         for (int i = 0; i < numSub; i++) {
             System.out.println("Please input subject " + (i + 1) + "'s score:");
             score[i] = input.nextInt();

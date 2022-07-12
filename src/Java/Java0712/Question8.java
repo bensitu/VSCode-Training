@@ -4,11 +4,16 @@ import java.util.Scanner;
 
 public class Question8 {
     public static void main(String[] args) {
-        String[][] number = new String[10][10];
-        int numLenth = number.length;
-        // 输入10个数字
         Scanner input = new Scanner(System.in);
-        System.out.println("Please input 10 numbers:");
+        System.out.println("How many columns do you want?");
+        int col = input.nextInt();
+
+        String[][] number = new String[col][];
+        int numLenth = number.length;
+        int temp;
+        // 输入n个数字
+
+        System.out.println("Please input " + col + " numbers:");
 
         // 将二维数组的值设为空格
         for (int sph = 0; sph < numLenth - 1; sph++) {
@@ -18,7 +23,13 @@ public class Question8 {
         }
         for (int i = 0; i < numLenth; i++) {
             // 将输入的数组代入二维数组的最后
-            number[numLenth - 1][i] = input.nextLine();
+            temp = input.nextInt();
+            if (temp > 10 || temp < 0) {
+                i--;
+                System.out.println("Error! More than 10 or less than 0.");
+            } else {
+                number[numLenth - 1][i] = Integer.toString(temp);
+            }
             // 判断数字，并且输出所需*
             if (number[numLenth - 1][i].equals("1")) {
                 for (int z = 8; z >= 8; z--) {
