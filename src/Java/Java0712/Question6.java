@@ -21,11 +21,11 @@ public class Question6 {
         int count = arr1.length;
         int[] arr2 = new int[count];
         for (int k = 0; k < arr1.length; k++) {
-            if (arr1[k] == num) {
-
-            } else {
+            if (arr1[k] != num) {
                 count++;
                 arr2[k] = arr1[k];
+            } else {
+                
             }
         }
 

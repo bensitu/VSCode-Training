@@ -9,11 +9,7 @@ public class Question8 {
         // 输入10个数字
         Scanner input = new Scanner(System.in);
         System.out.println("Please input 10 numbers:");
-        // 把输入的数字放到一个数组
-        String[] origin = new String[10];
-        for (int a = 0; a < origin.length; a++) {
-            origin[a] = input.nextLine();
-        }
+
         // 将二维数组的值设为空格
         for (int sph = 0; sph < numLenth - 1; sph++) {
             for (int sps = 0; sps < numLenth; sps++) {
@@ -22,42 +18,41 @@ public class Question8 {
         }
         for (int i = 0; i < numLenth; i++) {
             // 将输入的数组代入二维数组的最后
-            number[numLenth - 1][i] = origin[i];
+            number[numLenth - 1][i] = input.nextLine();
             // 判断数字，并且输出所需*
-
-            if (origin[i].equals("1")) {
+            if (number[numLenth - 1][i].equals("1")) {
                 for (int z = 8; z >= 8; z--) {
                     number[z][i] = "*";
                 }
-            } else if (origin[i].equals("2")) {
+            } else if (number[numLenth - 1][i].equals("2")) {
                 for (int z = 8; z >= 7; z--) {
                     number[z][i] = "*";
                 }
-            } else if (origin[i].equals("3")) {
+            } else if (number[numLenth - 1][i].equals("3")) {
                 for (int z = 8; z >= 6; z--) {
                     number[z][i] = "*";
                 }
-            } else if (origin[i].equals("4")) {
+            } else if (number[numLenth - 1][i].equals("4")) {
                 for (int z = 8; z >= 5; z--) {
                     number[z][i] = "*";
                 }
-            } else if (origin[i].equals("5")) {
+            } else if (number[numLenth - 1][i].equals("5")) {
                 for (int z = 8; z >= 4; z--) {
                     number[z][i] = "*";
                 }
-            } else if (origin[i].equals("6")) {
+            } else if (number[numLenth - 1][i].equals("6")) {
                 for (int z = 8; z >= 3; z--) {
                     number[z][i] = "*";
                 }
-            } else if (origin[i].equals("7")) {
+            } else if (number[numLenth - 1][i].equals("7")) {
                 for (int z = 8; z >= 2; z--) {
                     number[z][i] = "*";
                 }
-            } else if (origin[i].equals("8")) {
+            } else if (number[numLenth - 1][i].equals("8")) {
                 for (int z = 8; z >= 1; z--) {
                     number[z][i] = "*";
                 }
-            } else if (origin[i].equals("9")) {
+            } else if (number[numLenth - 1][i].equals("9")) {
                 for (int z = 8; z >= 0; z--) {
                     number[z][i] = "*";
                 }
