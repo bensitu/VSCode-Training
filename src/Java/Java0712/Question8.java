@@ -24,40 +24,41 @@ public class Question8 {
             // 将输入的数组代入二维数组的最后
             number[numLenth - 1][i] = origin[i];
             // 判断数字，并且输出所需*
-            if (number[numLenth - 1][i] == "1") {
+
+            if (origin[i].equals("1")) {
                 for (int z = 8; z >= 8; z--) {
                     number[z][i] = "*";
                 }
-            } else if (number[numLenth - 1][i] == "2") {
+            } else if (origin[i].equals("2")) {
                 for (int z = 8; z >= 7; z--) {
                     number[z][i] = "*";
                 }
-            } else if (number[numLenth - 1][i] == "3") {
+            } else if (origin[i].equals("3")) {
                 for (int z = 8; z >= 6; z--) {
                     number[z][i] = "*";
                 }
-            } else if (number[numLenth - 1][i] == "4") {
+            } else if (origin[i].equals("4")) {
                 for (int z = 8; z >= 5; z--) {
                     number[z][i] = "*";
                 }
-            } else if (number[numLenth - 1][i] == "5") {
+            } else if (origin[i].equals("5")) {
                 for (int z = 8; z >= 4; z--) {
                     number[z][i] = "*";
                 }
-            } else if (number[numLenth - 1][i] == "6") {
+            } else if (origin[i].equals("6")) {
                 for (int z = 8; z >= 3; z--) {
                     number[z][i] = "*";
                 }
-            } else if (number[numLenth - 1][i] == "7") {
+            } else if (origin[i].equals("7")) {
                 for (int z = 8; z >= 2; z--) {
                     number[z][i] = "*";
                 }
-            } else if (number[numLenth - 1][i] == "8") {
-                for (int z = 8; z >= 2; z--) {
+            } else if (origin[i].equals("8")) {
+                for (int z = 8; z >= 1; z--) {
                     number[z][i] = "*";
                 }
-            } else if (number[numLenth - 1][i] == "9") {
-                for (int z = 8; z > 1; z--) {
+            } else if (origin[i].equals("9")) {
+                for (int z = 8; z >= 0; z--) {
                     number[z][i] = "*";
                 }
             } else {
