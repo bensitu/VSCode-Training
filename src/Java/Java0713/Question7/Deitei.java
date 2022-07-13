@@ -6,8 +6,14 @@ public class Deitei {
     int katei;
     int takasa;
 
-    public int getMenseki(int jyotei, int katei, int takasa) {
-        int menseki = (jyotei + katei) * takasa / 2;
+    public Deitei(int jyotei, int katei, int takasa) {
+        this.jyotei = jyotei;
+        this.katei = katei;
+        this.takasa = takasa;
+    }
+
+    public int getMenseki() {
+        int menseki = (this.jyotei + this.katei) * this.takasa / 2;
         return menseki;
     }
 
