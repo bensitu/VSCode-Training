@@ -8,5 +8,8 @@ public class Main {
         Manager hanako = new Manager();
         hanako.name = "花子";
 
+        taro.operation("太郎");
+        hanako.operation("花子");
+        hanako.management("花子");
     }
 }

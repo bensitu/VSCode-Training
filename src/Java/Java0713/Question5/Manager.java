@@ -3,7 +3,7 @@ package Java.Java0713.Question5;
 public class Manager extends Employee {
     public Manager() {
         super();
-      management(name);
+      //management(this.name);
     }
 
     public void management(String name) {

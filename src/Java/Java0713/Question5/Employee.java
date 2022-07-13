@@ -4,14 +4,10 @@ public class Employee {
     String name;
 
     public Employee() {
-        //String name;
-        operation(this.name);
+       // operation(this.name);
     }
 
     public void operation(String name) {
-        
-            System.out.println(this.name + "は通常業務を行います。");
-        
-
+            System.out.println(this.name + "は通常業務を行います。");    
     }
 }
