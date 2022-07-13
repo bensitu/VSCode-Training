@@ -6,7 +6,7 @@ public class Manager extends Employee {
       //management(this.name);
     }
 
-    public void management(String name) {
+    public void management() {
         System.out.println(this.name + "は管理業務を行います。");
     }
 

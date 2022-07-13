@@ -7,7 +7,7 @@ public class Employee {
        // operation(this.name);
     }
 
-    public void operation(String name) {
+    public void operation() {
             System.out.println(this.name + "は通常業務を行います。");    
     }
 }
