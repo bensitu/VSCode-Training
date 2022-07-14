@@ -20,7 +20,7 @@ public class Main {
         Book b1 = new Book(bookPageNum, bookPrice);
         Notebook nb1 = new Notebook(notebookPageNum, notebookPrice);
 
-        int selectNum, count = 0;
+        int selectNum, pageCount = 0;
 
         while (true) {
             System.out.println("------------------------------------");
@@ -32,9 +32,9 @@ public class Main {
             selectNum = input.nextInt();
             switch (selectNum) {
                 case 1:
-                    if (count <= notebookPageNum) {
+                    if (pageCount < notebookPageNum) {
                         nb1.addContent();
-                        count++;
+                        pageCount++;
                     } else {
                         System.out.println("The notebook is full!");
                     }
@@ -50,9 +50,10 @@ public class Main {
 
                 case 4:
                     System.out.println("System shutdown.");
+                    input.close();
                     return;
             }
-            input.close();
         }
+        
     }
 }
