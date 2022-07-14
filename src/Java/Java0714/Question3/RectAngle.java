@@ -9,16 +9,7 @@ public class RectAngle {
         this.height = height;
     }
 
-    public RectAngle(int width) {
-        this.width = width;
-    }
-
     public int getMenseki() {
-        if (height != 0) {
-            return height * width;
-        } else {
-            return width * width;      
-        }
-
+        return height * width;
     }
 }

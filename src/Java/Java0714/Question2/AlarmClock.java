@@ -12,7 +12,7 @@ public class AlarmClock extends Clock {
     }
 
     public void alarm() {
-        if (this.alarmTime == time) {
+        if (this.alarmTime.equals(time)) {
             System.out.println("アラームが鳴りました。");
         }
     }
