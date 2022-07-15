@@ -7,12 +7,9 @@ public class Main {
 
         cooler.setGoalTemp(27);
         cooler.adjust();
-
         cooler.adjust();
-
+        aircon.setGoalTemp(27);
         aircon.adjust();
-        aircon.adjust();
-
         aircon.setGoalTemp(28);
         aircon.adjust();
         aircon.adjust();

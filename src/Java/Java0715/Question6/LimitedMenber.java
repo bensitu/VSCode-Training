@@ -13,4 +13,21 @@ public class LimitedMenber extends Menber {
         this.isUseable(18);
     }
 
+    protected int getMonthlyFee() {
+        return this.monthlyFee = (int) (super.getMonthlyFee() * 0.6);
+    }
+
+    public boolean isUseable(int hour) {
+        if (startTime <= endTime) {
+            if (startTime <= hour && hour <= endTime) {
+                return false;
+            }
+        } else {
+            if ((startTime <= hour && hour <= 23) || (0 <= hour && hour <= endTime)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
