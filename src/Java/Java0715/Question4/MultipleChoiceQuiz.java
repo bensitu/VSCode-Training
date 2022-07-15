@@ -1,14 +1,31 @@
 package Java.Java0715.Question4;
 
 public class MultipleChoiceQuiz extends Quiz {
-    int blankCount;
+    String[] answers;
 
-    protected MultipleChoiceQuiz(String main, int blankCount){
+    public MultipleChoiceQuiz(String main, String[] answers) {
         super(main);
-        this.blankCount = blankCount;
+        this.answers = answers;
     }
 
-    void displayHeader(){
-        System.out.println("次の空欄を埋めなさい。");
-    }
 }
+
+/*
+ * String answers[];
+ * 
+ * protected BlankQuiz(String main, String answers[]) {
+ * super(main);
+ * this.answers = answers;
+ * }
+ * 
+ * void displayHeader() {
+ * System.out.println("次の問いについて、正しいものを４つ中にから選びなさい。");
+ * }
+ * 
+ * void displayMain() {
+ * System.out.println(this.main);
+ * for (int i = 0; i < answers.length; i++) {
+ * System.out.println(i + ": " + answers[i]);
+ * }
+ * }
+ */
