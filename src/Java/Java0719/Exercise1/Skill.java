@@ -1,4 +1,4 @@
-package Java.Java0716.Exercise1;
+package Java.Java0719.Exercise1;
 
 public interface Skill {
     public void eat();

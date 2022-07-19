@@ -1,4 +1,4 @@
-package Java.Java0716.Exercise1;
+package Java.Java0719.Exercise1;
 
 public class Cat extends Aminal implements Skill {
 
