@@ -16,7 +16,7 @@ public class BlankQuiz extends Quiz {
         System.out.println(this.main);
         System.out.println(this.main);
         for (int i = 0; i < blankCount; i++) {
-            System.out.println(i + ": ____");
+            System.out.println((i + 1) + ": ____");
         }
     }
 }
