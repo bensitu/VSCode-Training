@@ -22,13 +22,21 @@ public class Main {
         System.out.println("---------------------");
         System.out.println("ID3のIDを入力して下さい");
         int tempID = input.nextInt();
-        System.out.println("ID3のパスワードを入力して下さい");
-        int tempPw = input.nextInt();
         if (tempID != account[2].getID()) {
             System.out.println("IDエラー");
         }
-        if (tempPw != account[2].getPassword()) {
-            System.out.println("パスワードエラー");
+        System.out.println("ID3のパスワードを入力して下さい");
+
+        while (true) {
+            int tempPw = input.nextInt();
+            int count = 0;
+            if (tempPw != account[2].getPassword() && count < 4) {
+                System.out.println("パスワードエラー");
+                count++;
+            } else {
+                System.out.println("登録成功");
+                break;
+            }
         }
 
         System.out.println("預けたい金額を入力して下さい");
@@ -40,13 +48,20 @@ public class Main {
         System.out.println("---------------------");
         System.out.println("ID5のIDを入力して下さい");
         tempID = input.nextInt();
-        System.out.println("ID5のパスワードを入力して下さい");
-        tempPw = input.nextInt();
         if (tempID != account[4].getID()) {
             System.out.println("IDエラー");
         }
-        if (tempPw != account[4].getPassword()) {
-            System.out.println("パスワードエラー");
+        System.out.println("ID5のパスワードを入力して下さい");
+        while (true) {
+            int tempPw = input.nextInt();
+            int count = 0;
+            if (tempPw != account[4].getPassword() && count < 4) {
+                System.out.println("パスワードエラー");
+                count++;
+            } else {
+                System.out.println("登録成功");
+                break;
+            }
         }
 
         System.out.println("お金を引き出したい金額を入力して下さい");
@@ -57,6 +72,7 @@ public class Main {
             account[4].setSaveMoney(account[4].getSaveMoney() - tempMoney);
             System.out.println("引き出し済み");
         }
+        input.close();
 
     }
 }
