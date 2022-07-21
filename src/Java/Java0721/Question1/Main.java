@@ -12,8 +12,11 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("Please input the names:");
         for (int i = 0; i < stu.length; i++) {
-            stu[i] = new Student(input.nextLine());
+            stu[i] = new Student();
+            stu[i].setName(input.nextLine());
             stu[i].setId(i + 1);
+            stu[i].setScore((int) (Math.random() * 100));
+            stu[i].setAge((int) (Math.random() * 60 + 1));
             if (stu[i].getScore() > MaxScore) {
                 MaxScore = stu[i].getScore();
             }

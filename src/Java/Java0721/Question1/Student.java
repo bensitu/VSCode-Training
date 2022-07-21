@@ -4,12 +4,9 @@ public class Student {
     private int id;
     private String name;
     private int age;
-    private int score;
+    private double score;
 
-    public Student(String name) {
-        this.name = name;
-        this.age = (int) (Math.random() * 60);
-        this.score = (int) (Math.random() * 100);
+    public Student() {
     }
 
     public int getId() {
@@ -32,7 +29,26 @@ public class Student {
         return age;
     }
 
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        } else {
+            this.age = 0;
+            // 抛出异常
+        }
+
+    }
+
     public double getScore() {
         return score;
+    }
+
+    public void setScore(double score) {
+        if (score > 0) {
+            this.score = score;
+        } else {
+            this.score = 0;
+        }
+
     }
 }
