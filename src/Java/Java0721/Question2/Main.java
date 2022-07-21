@@ -21,7 +21,7 @@ public class Main {
             }
         }
 
-        // 三年生の学生資料を出力する
+        // 1. 三年生の学生資料を出力する
         System.out.println("3年目の学生は: ");
         System.out.println("番号    性別    年級    年齢    成績");
         for (Student stuObj : stu) {
@@ -34,7 +34,7 @@ public class Main {
             }
         }
 
-        // 成績の順番で学生を出力する
+        // 2. 成績の順番で学生を出力する
         Student[] stu2 = new Student[stu.length];
         for (int i = 0; i < stu.length; i++) {
             stu2[i] = stu[i];
@@ -80,7 +80,7 @@ public class Main {
                     + stuObj.getAge() + "     " + stuObj.getScore());
         }
 
-        // 性別に分けて学生資料を出力する。
+        // 3. 性別に分けて学生資料を出力する。
         Student[] stu3 = new Student[stu.length];
         for (int i = 0; i < stu.length; i++) {
             stu3[i] = stu[i];
