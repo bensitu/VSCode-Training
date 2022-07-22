@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        Set<String> set = new HashSet();
+        Set<String> set = new HashSet<>();
         set.add("リンゴ");
         set.add("ミカン");
         set.add("バナナ");
