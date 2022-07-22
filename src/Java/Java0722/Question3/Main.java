@@ -1,6 +1,7 @@
 package Java.Java0722.Question3;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
@@ -20,6 +21,7 @@ public class Main {
 
         System.out.println("---------------------");
         ArrayList<String> arr1 = new ArrayList<>(set); // HashsetをArrayListに変える
+        Collections.sort(arr1);
         System.out.println(arr1);
 
         System.out.println("---------------------");// HashsetをTreeSetに変える

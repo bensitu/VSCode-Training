@@ -17,7 +17,7 @@ public class Main {
         while (it.hasNext()) {
             String s = it.next();
             // System.out.println(it.next()); // 元素
-            // System.out.println(this.length());// 元素长度
+            // System.out.println(it.next().length());// 元素长度
 
             System.out.println(s);
             System.out.println(s.length());
