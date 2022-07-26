@@ -1,11 +1,9 @@
 package Java.Java0725.Question9;
 
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.*;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -20,12 +18,12 @@ public class Main {
 
         // studentList.sort(Comparator.naturalOrder());
 
-        Set entrySet = studentList.entrySet();
-        Iterator it = entrySet.iterator();
+        Set<?> entrySet = studentList.entrySet();
+        Iterator<?> it = entrySet.iterator();
         System.out.println("Student list:");
         while (it.hasNext()) {
             Object obj = it.next();
-            Map.Entry entry = (Map.Entry) obj;
+            Map.Entry<String, Integer> entry = (Entry) obj;
             System.out.println(entry.getKey() + "\t" + entry.getValue());
         }
         input.close();
