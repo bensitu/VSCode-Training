@@ -10,14 +10,12 @@ public class ProductManager {
     };
 
     public static Product searchProduct(String name) throws BusinessException {
-        for (int i = 0; i < products.length;) {
+        for (int i = 0; i < products.length; i++) {
             if (products[i].name.equals(name)) {
                 return products[i];
-            } else {
-                throw new BusinessException("商品がありません");
             }
         }
-        return null;
+        throw new BusinessException("商品がありません");
     }
 
 }
