@@ -1,0 +1,7 @@
+CHIBA	千葉市
+GUNMA	前橋市
+IBARAKI	水戸市
+KANAGAWA	横浜市
+SAITAMA	さいたま市
+TOCHIGI	宇都宮市
+TOKYO	東京(新宿区)
