@@ -18,7 +18,7 @@ public class Main {
                 System.out.println("ThreadA");
                 if (i % 3 == 0) {
                     try {
-                        sleep(100);
+                        sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -35,7 +35,7 @@ public class Main {
                 System.out.println("ThreadB");
                 if (i % 3 == 1) {
                     try {
-                        sleep(100);
+                        sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -52,7 +52,7 @@ public class Main {
                 System.out.println("ThreadC");
                 if (i % 3 == 2) {
                     try {
-                        sleep(100);
+                        sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
