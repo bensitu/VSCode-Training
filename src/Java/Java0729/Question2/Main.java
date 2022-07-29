@@ -7,54 +7,58 @@ public class Main {
         System.out.println("Please input the 計算:");
         Scanner input = new Scanner(System.in);
         String s1 = input.nextLine();
-        String[] s2 = method(s1);
-        int total = 0;
-        switch (s2[1]) {
-            case "+":
-                total = Integer.parseInt(s2[0]) + Integer.parseInt(s2[1]);
-                System.out.println(s2[0] + s2[2] + s2[1] + "=" + total);
-                break;
-            case "-":
-                total = Integer.parseInt(s2[0]) - Integer.parseInt(s2[1]);
-                System.out.println(s2[0] + s2[1] + s2[2] + "=" + total);
-                break;
-            case "*":
-                total = Integer.parseInt(s2[0]) * Integer.parseInt(s2[1]);
-                System.out.println(s2[0] + s2[1] + s2[2] + "=" + total);
-                break;
-            case "/":
-                total = Integer.parseInt(s2[0]) / Integer.parseInt(s2[1]);
-                System.out.println(s2[0] + s2[1] + s2[2] + "=" + total);
-                break;
-            default:
-                break;
-
-        }
-
-        System.out.println(total);
-        input.close();
-    }
-
-    public static String[] method(String s1) {
-        if (s1.contains("+")) {
-            String[] str1 = s1.split("[+]");
-            // str1[2] = "+";
-            return str1;
-        } else if (s1.contains("-")) {
-            String[] str1 = s1.split("[-]");
-            // str1[2] = "-";
-            return str1;
-        } else if (s1.contains("*")) {
-            String[] str1 = s1.split("[*]");
-            // str1[2] = "*";
-            return str1;
-        } else if (s1.contains("/")) {
-            String[] str1 = s1.split("[/]");
-            // str1[2] = "/";
-            return str1;
+        String[] str1 = s1.split("\\+|\\*|\\-|/|%");
+        if (s1.startsWith("-")) {
+            s1 = s1.replaceFirst("\\-", "");
+            if (s1.contains("+")) {
+                int total = -Integer.parseInt(str1[1]) + Integer.parseInt(str1[2]);
+                System.out.println(total);
+            } else if (s1.contains("-")) {
+                System.out.println(str1[1] + " " + str1[2]);
+                int total = -Integer.parseInt(str1[1]) - Integer.parseInt(str1[2]);
+                System.out.println(total);
+            } else if (s1.contains("*")) {
+                int total = -Integer.parseInt(str1[1]) * Integer.parseInt(str1[2]);
+                System.out.println(total);
+            } else if (s1.contains("/")) {
+                if (Integer.parseInt(str1[2]) == 0) {
+                    int total = 0;
+                    System.out.println(total);
+                } else {
+                    System.out.println(str1[1] + " " + str1[2]);
+                    int total = -Integer.parseInt(str1[1]) / Integer.parseInt(str1[2]);
+                    int Yu = -Integer.parseInt(str1[1]) % Integer.parseInt(str1[2]);
+                    System.out.println(total + " 余：" + Yu);
+                }
+            } else {
+                int total = 0;
+                System.out.println(total);
+            }
         } else {
-            return null;
+            if (s1.contains("+")) {
+                int total = Integer.parseInt(str1[0]) + Integer.parseInt(str1[1]);
+                System.out.println(total);
+            } else if (s1.contains("-")) {
+                int total = Integer.parseInt(str1[0]) - Integer.parseInt(str1[1]);
+                System.out.println(total);
+            } else if (s1.contains("*")) {
+                // String[] str1 = s1.split("[*]");
+                int total = Integer.parseInt(str1[0]) * Integer.parseInt(str1[1]);
+                System.out.println(total);
+            } else if (s1.contains("/")) {
+                if (Integer.parseInt(str1[1]) == 0) {
+                    int total = 0;
+                    System.out.println(total);
+                } else {
+                    int total = Integer.parseInt(str1[0]) / Integer.parseInt(str1[1]);
+                    int Yu = Integer.parseInt(str1[0]) % Integer.parseInt(str1[1]);
+                    System.out.println(total + " 余：" + Yu);
+                }
+            } else {
+                int total = 0;
+                System.out.println(total);
+            }
         }
-
+        input.close();
     }
 }
