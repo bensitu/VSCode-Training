@@ -19,17 +19,21 @@ public class Main {
         String sql1 = "SELECT * FROM lunchmenu";
         PreparedStatement ps1 = conn.prepareStatement(sql1);
         ResultSet resultSet = ps1.executeQuery();
-        if (resultSet.next()) {
-            int id = resultSet.getInt(1);
-            String name = resultSet.getString(2);
-            int price = resultSet.getInt(3);
-            int limited = resultSet.getInt(4);
 
-            // Object[] data = new Object[] { id, name, price, limited };
-            System.out.println(id);
-            System.out.println(name);
-            System.out.println(price);
-            System.out.println(limited);
+        for (int i = 0; i < 4; i++) {
+            if (resultSet.next()) {
+                int id = resultSet.getInt(1);
+                String name = resultSet.getString(2);
+                int price = resultSet.getInt(3);
+                int limited = resultSet.getInt(4);
+
+                // Object[] data = new Object[] { id, name, price, limited };
+                System.out.print(id + " ");
+                System.out.print(name + " ");
+                System.out.print(price + " ");
+                System.out.print(limited + " ");
+                System.out.println();
+            }
         }
 
         // セットEを追加する
