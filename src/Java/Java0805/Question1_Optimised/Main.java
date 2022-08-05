@@ -3,8 +3,7 @@ package Java.Java0805.Question1_Optimised;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
-import Java.Java0726.Question1.Ex;
+import java.sql.ResultSetMetaData;
 
 public class Main {
     public static void main(String[] args) {
@@ -40,16 +39,35 @@ public class Main {
         }
     }
 
-    public static void comminQuery(String sql, Object... args) throws Exception {
-        Connection conn = JDBCUtils.getConnection();
-
-        PreparedStatement ps = conn.prepareStatement(sql);
-
-        for (int i = 0; i < args.length; i++) {
-            ps.setObject(i + 1, args[i]);
-        }
-
-        ResultSet rs = ps.executeQuery();
-
-    }
+    /*
+     * public static LunchMenu commonQuery(String sql, Object... args) throws
+     * Exception {
+     * Connection conn = JDBCUtils.getConnection();
+     * 
+     * PreparedStatement ps = conn.prepareStatement(sql);
+     * 
+     * for (int i = 0; i < args.length; i++) {
+     * ps.setObject(i + 1, args[i]);
+     * }
+     * 
+     * ResultSet rs = ps.executeQuery();
+     * ResultSetMetaData rsmd = rs.getMetaData();
+     * int columnCount = rsmd.getColumnCount();
+     * 
+     * if (rs.next()) {
+     * LunchMenu lm = new LumchMenu();
+     * for (int i = 0; i < columnCount; i++) {
+     * Object columnValue = rs.getObject(i + 1);
+     * 
+     * String columnName = rsmd.getColumnName(i + 1);
+     * 
+     * Field field = LumchMenu.class.getDeclaredFields(columnName);
+     * field.setAccessible(true);
+     * field.set(lm, columnValue);
+     * }
+     * return lm;
+     * }
+     * 
+     * }
+     */
 }
