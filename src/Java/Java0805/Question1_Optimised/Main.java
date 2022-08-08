@@ -39,32 +39,32 @@ public class Main {
         }
     }
 
-    public static void commonQuery(String sql, Object... args) throws Exception {
-        Connection conn = JDBCUtils.getConnection();
+    // public static void commonQuery(String sql, Object... args) throws Exception {
+    // Connection conn = JDBCUtils.getConnection();
 
-        PreparedStatement ps = conn.prepareStatement(sql);
+    // PreparedStatement ps = conn.prepareStatement(sql);
 
-        for (int i = 0; i < args.length; i++) {
-            ps.setObject(i + 1, args[i]);
-        }
+    // for (int i = 0; i < args.length; i++) {
+    // ps.setObject(i + 1, args[i]);
+    // }
 
-        ResultSet rs = ps.executeQuery();
-        ResultSetMetaData rsmd = rs.getMetaData();
-        int columnCount = rsmd.getColumnCount();
+    // ResultSet rs = ps.executeQuery();
+    // ResultSetMetaData rsmd = rs.getMetaData();
+    // int columnCount = rsmd.getColumnCount();
 
-        if (rs.next()) {
-            commonQuery lm = new commonQuery();
-            for (int i = 0; i < columnCount; i++) {
-                Object columnValue = rs.getObject(i + 1);
+    // if (rs.next()) {
+    // commonQuery lm = new commonQuery();
+    // for (int i = 0; i < columnCount; i++) {
+    // Object columnValue = rs.getObject(i + 1);
 
-                String columnLabel = rsmd.getColumnLabel(i + 1);
+    // String columnLabel = rsmd.getColumnLabel(i + 1);
 
-                Field field = LumchMenu.class.getDeclaredFields(columnLabel);
-                field.setAccessible(true);
-                field.set(lm, columnValue);
-            }
-            return lm;
-        }
-    }
+    // Field field = LumchMenu.class.getDeclaredFields(columnLabel);
+    // field.setAccessible(true);
+    // field.set(lm, columnValue);
+    // }
+    // return lm;
+    // }
+    // }
 
 }
