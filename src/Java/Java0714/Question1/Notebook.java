@@ -14,18 +14,30 @@ public class Notebook extends Book {
 
     public void addContent() {
         System.out.println("Please enter your content:");
-        Scanner inputContent = new Scanner(System.in);
-        this.newContent = inputContent.nextLine();
-        if (this.fullContent[count] == null && count < this.fullContent.length) {
-            this.fullContent[count] = this.newContent;
-            this.count++;
-        } else if (this.fullContent[count] != null && count < this.fullContent.length) {
-            this.count++;
-            this.fullContent[count] = this.newContent;
-        } else {
-            System.out.println("Notebook is full!");
+        Scanner inputContent = null;
+        try {
+            inputContent = new Scanner(System.in);
+            this.newContent = inputContent.nextLine();
+            if (this.fullContent[count] == null && count < this.fullContent.length) {
+                this.fullContent[count] = this.newContent;
+                this.count++;
+            } else if (this.fullContent[count] != null && count < this.fullContent.length) {
+                this.count++;
+                this.fullContent[count] = this.newContent;
+            } else {
+                System.out.println("Notebook is full!");
+            }
+        } catch (Exception e) {
+            System.out.println("Exception :: " + e.getMessage());
+        } finally {
+            try {
+                if (inputContent != null) {
+                    inputContent.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-        //inputContent.close();
     }
 
     public void show() {
