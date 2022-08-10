@@ -4,11 +4,10 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Insert title here</title>
+        <title>HomePage3</title>
         <script type="text/javascript">
-            function myBtn1() {
-                let correct = document.getElementById('yes');
-                if (correct.checked) {
+            function btnFunction() {
+                if (document.getElementById('yes').checked) {
                     alert('正解です');
                 }
             }
@@ -16,11 +15,11 @@
     </head>
 
     <body>
-        <form>
-            <p>スペイン語で月曜はLunesである</p>
+        <form action="Q3-1.jsp" method="post">
+            <p>スペイン語で月曜はLunesである.</p>
             <input type="radio" id="yes" name="Lunes" value="yes"><label for="yes">はい</label>
             <input type="radio" id="no" name="Lunes" value="no"><label for="no">いいえ</label>
-            <input type="button" id="btn1" value="送信" onclick="myBtn1()">
+            <input type="submit" id="btn1" value="送信">
         </form>
     </body>
 
