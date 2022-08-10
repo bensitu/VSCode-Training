@@ -9,9 +9,6 @@
 <body>
 	<table border=1 cellpadding=0 cellspacing=0>
 		<%
-		int flag = 1;
-		%>
-		<%
 		for (int i = 1; i < 10; i++) {
 		%>
 		<tr>
@@ -25,9 +22,6 @@
 			</td>
 			<%
 			}
-			%>
-			<%
-			flag = 0;
 			%>
 		</tr>
 		<%}%>
