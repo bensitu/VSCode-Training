@@ -9,16 +9,18 @@ import java.util.Properties;
 public class JDBCUtils {
     public static Connection getConnection() throws Exception {
         InputStream is = ClassLoader.getSystemClassLoader()
-                .getResourceAsStream("src/Java0815/Question1/jdbc.properties");
+                .getResourceAsStream("Java/Java0815/Question1/jdbc.properties");
         Properties pros = new Properties();
         pros.load(is);
+
+        // ds= DruidDataSourceFactory.createDataSource(pro);
 
         String user = pros.getProperty("user");
         String password = pros.getProperty("passsword");
         String url = pros.getProperty("url");
-        String driverCalss = pros.getProperty("driverClass");
+        String driverClass = pros.getProperty("driverClass");
 
-        Class.forName(driverCalss);
+        Class.forName(driverClass);
 
         Connection conn = DriverManager.getConnection(url, user, password);
         return conn;

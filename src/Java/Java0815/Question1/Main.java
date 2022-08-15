@@ -15,7 +15,6 @@ public class Main {
         try {
             // 1.获取连接
             conn = JDBCUtils.getConnection();
-            System.out.println("hello");
             // 开启事务
             conn.setAutoCommit(false);
             System.out.println("登録SQL発行前の書籍一覧表示:");
