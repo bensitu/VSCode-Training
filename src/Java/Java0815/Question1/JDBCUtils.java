@@ -13,10 +13,8 @@ public class JDBCUtils {
         Properties pros = new Properties();
         pros.load(is);
 
-        // ds= DruidDataSourceFactory.createDataSource(pro);
-
         String user = pros.getProperty("user");
-        String password = pros.getProperty("passsword");
+        String password = pros.getProperty("password");
         String url = pros.getProperty("url");
         String driverClass = pros.getProperty("driverClass");
 

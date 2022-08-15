@@ -20,14 +20,13 @@ public class Main {
             System.out.println("登録SQL発行前の書籍一覧表示:");
             // 2.定义sql
             String sql1 = "SELECT * FROM books";
-            String sql2 = "INSERT INTO bookinfo (isbn, title, price) values('?', '?', ?)";
-            String sql3 = "INSERT INTO bookinfo (isbn, title, price) values('?', '?', ?)";
+            String sql2 = "INSERT INTO books (isbn, title, price) values(?, ?, ?)";
+            String sql3 = "INSERT INTO books (isbn, title, price) values(?, ?, ?)";
             // 3.获取执行sql对象
             pstmt1 = conn.prepareStatement(sql1);
             pstmt2 = conn.prepareStatement(sql2);
             pstmt3 = conn.prepareStatement(sql3);
             // 4. 设置参数
-
             pstmt2.setInt(1, 006);
             pstmt2.setString(2, "Object-C入門テキスト");
             pstmt2.setInt(3, 3500);
