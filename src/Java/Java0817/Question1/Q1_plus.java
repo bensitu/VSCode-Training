@@ -1,40 +1,39 @@
-package Java.Java0817.Question1;
+package java0817;
 
 import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.io.PrintWriter;
 
-/**
- * Servlet implementation class Aservlet
- */
-@WebServlet("/Aservlet")
-public class Aservlet extends HttpServlet {
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class Q1_plus extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Aservlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
      *      response)
      */
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
-        String s1 = request.getParameter("data1");
-        String s2 = request.getParameter("data2");
-        int a = Integer.parseInt(s1);
-        int b = Integer.parseInt(s2);
-        int sum = a + b;
-        request.setAttribute("aaa", sum);
-        request.getRequestDispatcher("/jsps/result.jsp").forward(request, response);
-    }
+        int sum = 0;
+        for (int i = 1000; i <= 3000; i++) {
+            sum += i;
+        }
+        response.setContentType("text/html; charset=UTF-8");
 
+        PrintWriter out = response.getWriter();
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<meta charset='utf-8' />");
+        out.println("<title>Lesson</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<p>1000から3000までの和は" + sum + "です。");
+        out.println("</body>");
+        out.println("</html>");
+
+    }
 }
