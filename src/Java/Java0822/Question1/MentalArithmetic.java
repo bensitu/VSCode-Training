@@ -30,6 +30,7 @@ public class MentalArithmetic extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // TODO Auto-generated method stub
+        response.setContentType("text/html;charset=UTF-8");
         ServletContext sc = this.getServletContext();
         MA_game_status status = (MA_game_status) sc.getAttribute("status");
         if (status == null) {
