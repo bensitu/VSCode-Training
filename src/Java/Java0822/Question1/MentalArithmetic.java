@@ -1,5 +1,6 @@
 package Java.Java0822.Question1;
 
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -29,7 +30,12 @@ public class MentalArithmetic extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // TODO Auto-generated method stub
-        response.getWriter().append("Served at: ").append(request.getContextPath());
+        ServletContext sc = this.getServletContext();
+        MA_game_status status = (MA_game_status) sc.getAttribute("status");
+        if (status == null) {
+            status = new MA_game_status();
+        }
+        sc.setAttribute("status", status);
     }
 
     /**
